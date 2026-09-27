@@ -1,0 +1,351 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', 'Cinzel', serif;
+    --font-heading: 'Playfair Display', serif;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-bengali: 'Hind Siliguri', 'Noto Serif Bengali', sans-serif;
+    --font-hand: 'Caveat', cursive;
+  }
+}
+
+/* Custom 3D & Paper Styling */
+.font-serif-book {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.font-heading-book {
+  font-family: 'Playfair Display', 'Cinzel', serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-chat {
+  font-family: 'Inter', 'Hind Siliguri', sans-serif;
+}
+
+.font-bengali {
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.font-hand {
+  font-family: 'Caveat', cursive;
+}
+
+/* 3D Transform Utilities */
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Realistic Book Shadows */
+.book-ambient-shadow {
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.8),
+    0 40px 80px -20px rgba(0, 0, 0, 0.7),
+    0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* PAGE INSET SHADOWS */
+/* Vintage Leather */
+.page-left-shadow {
+  box-shadow: 
+    inset -18px 0 24px -10px rgba(45, 30, 15, 0.18),
+    inset -4px 0 8px rgba(0, 0, 0, 0.08);
+}
+.page-right-shadow {
+  box-shadow: 
+    inset 18px 0 24px -10px rgba(45, 30, 15, 0.18),
+    inset 4px 0 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Midnight Navy */
+.page-left-shadow-dark {
+  box-shadow: 
+    inset -18px 0 24px -10px rgba(5, 10, 25, 0.7),
+    inset -4px 0 8px rgba(0, 0, 0, 0.4);
+}
+.page-right-shadow-dark {
+  box-shadow: 
+    inset 18px 0 24px -10px rgba(5, 10, 25, 0.7),
+    inset 4px 0 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Botanical Sage */
+.page-left-shadow-sage {
+  box-shadow: 
+    inset -18px 0 24px -10px rgba(20, 45, 25, 0.16),
+    inset -4px 0 8px rgba(0, 0, 0, 0.06);
+}
+.page-right-shadow-sage {
+  box-shadow: 
+    inset 18px 0 24px -10px rgba(20, 45, 25, 0.16),
+    inset 4px 0 8px rgba(0, 0, 0, 0.06);
+}
+
+/* STACKED PAPER SIDES */
+/* Vintage */
+.paper-stacked-left {
+  box-shadow: 
+    -2px 0 0 #f0ece1,
+    -4px 2px 0 #ded8cb,
+    -6px 4px 0 #cdc4b3,
+    -8px 6px 15px rgba(0, 0, 0, 0.35);
+}
+.paper-stacked-right {
+  box-shadow: 
+    2px 0 0 #f0ece1,
+    4px 2px 0 #ded8cb,
+    6px 4px 0 #cdc4b3,
+    8px 6px 15px rgba(0, 0, 0, 0.35);
+}
+
+/* Midnight */
+.paper-stacked-midnight-left {
+  box-shadow: 
+    -2px 0 0 #1e293b,
+    -4px 2px 0 #182234,
+    -6px 4px 0 #0f172a,
+    -8px 6px 15px rgba(0, 0, 0, 0.6);
+}
+.paper-stacked-midnight-right {
+  box-shadow: 
+    2px 0 0 #1e293b,
+    4px 2px 0 #182234,
+    6px 4px 0 #0f172a,
+    8px 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Sage */
+.paper-stacked-sage-left {
+  box-shadow: 
+    -2px 0 0 #dbe4db,
+    -4px 2px 0 #cbd7cb,
+    -6px 4px 0 #b9c7b9,
+    -8px 6px 15px rgba(0, 0, 0, 0.35);
+}
+.paper-stacked-sage-right {
+  box-shadow: 
+    2px 0 0 #dbe4db,
+    4px 2px 0 #cbd7cb,
+    6px 4px 0 #b9c7b9,
+    8px 6px 15px rgba(0, 0, 0, 0.35);
+}
+
+/* GUTTER GRADIENTS */
+.book-gutter-gradient {
+  background: linear-gradient(
+    90deg, 
+    rgba(30, 20, 10, 0.28) 0%, 
+    rgba(30, 20, 10, 0.12) 4%, 
+    rgba(30, 20, 10, 0.02) 10%, 
+    transparent 15%, 
+    transparent 85%, 
+    rgba(30, 20, 10, 0.02) 90%, 
+    rgba(30, 20, 10, 0.12) 96%, 
+    rgba(30, 20, 10, 0.28) 100%
+  );
+}
+
+.book-gutter-midnight-gradient {
+  background: linear-gradient(
+    90deg, 
+    rgba(5, 10, 25, 0.7) 0%, 
+    rgba(5, 10, 25, 0.3) 4%, 
+    rgba(5, 10, 25, 0.05) 10%, 
+    transparent 15%, 
+    transparent 85%, 
+    rgba(5, 10, 25, 0.05) 90%, 
+    rgba(5, 10, 25, 0.3) 96%, 
+    rgba(5, 10, 25, 0.7) 100%
+  );
+}
+
+.book-gutter-sage-gradient {
+  background: linear-gradient(
+    90deg, 
+    rgba(15, 35, 20, 0.26) 0%, 
+    rgba(15, 35, 20, 0.1) 4%, 
+    rgba(15, 35, 20, 0.02) 10%, 
+    transparent 15%, 
+    transparent 85%, 
+    rgba(15, 35, 20, 0.02) 90%, 
+    rgba(15, 35, 20, 0.1) 96%, 
+    rgba(15, 35, 20, 0.26) 100%
+  );
+}
+
+/* PAPER BACKGROUND TEXTURES */
+/* 1. Vintage Warm Ivory */
+.paper-warm-bg {
+  background-color: #FAF7F0;
+  background-image: 
+    radial-gradient(rgba(180, 150, 110, 0.1) 1px, transparent 0),
+    radial-gradient(rgba(180, 150, 110, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* 2. Midnight Dark Obsidian Paper */
+.paper-midnight-bg {
+  background-color: #0f172a;
+  background-image: 
+    radial-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 0),
+    radial-gradient(rgba(96, 165, 250, 0.06) 1px, transparent 0);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* 3. Botanical Sage Matcha Paper */
+.paper-sage-bg {
+  background-color: #EDF3EC;
+  background-image: 
+    radial-gradient(rgba(100, 140, 110, 0.1) 1px, transparent 0),
+    radial-gradient(rgba(100, 140, 110, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* LEATHER COVER TEXTURES */
+.leather-texture {
+  background: 
+    linear-gradient(135deg, #2b1810 0%, #1a0f0a 100%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.04) 0%, transparent 60%);
+}
+
+.leather-green-texture {
+  background: 
+    linear-gradient(135deg, #0e2a22 0%, #061611 100%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.04) 0%, transparent 60%);
+}
+
+.leather-navy-texture {
+  background: 
+    linear-gradient(135deg, #101a2c 0%, #090e18 100%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.04) 0%, transparent 60%);
+}
+
+/* Gold Foil Embossing Effect */
+.gold-foil-text {
+  background: linear-gradient(135deg, #ffe29f 0%, #d4af37 40%, #a67c1e 70%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+.silver-foil-text {
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+/* CHAT BUBBLE STYLES PER THEME */
+/* Vintage Leather */
+.bubble-tactile-a {
+  background: #FFFFFF;
+  box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.06),
+    0 3px 6px -1px rgba(130, 100, 70, 0.08);
+  border: 1px solid rgba(220, 210, 195, 0.7);
+}
+
+.bubble-tactile-b {
+  background: #F1F7EE;
+  box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.06),
+    0 3px 6px -1px rgba(60, 100, 70, 0.1);
+  border: 1px solid rgba(195, 220, 200, 0.7);
+}
+
+/* Midnight Navy */
+.bubble-tactile-midnight-a {
+  background: #1e293b;
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.3),
+    0 4px 10px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(71, 85, 105, 0.7);
+}
+
+.bubble-tactile-midnight-b {
+  background: #1e3a5f;
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.3),
+    0 4px 10px rgba(30, 58, 138, 0.3);
+  border: 1px solid rgba(96, 165, 250, 0.4);
+}
+
+/* Botanical Sage */
+.bubble-tactile-sage-a {
+  background: #FFFFFF;
+  box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.05),
+    0 3px 6px -1px rgba(40, 80, 50, 0.08);
+  border: 1px solid rgba(190, 215, 195, 0.8);
+}
+
+.bubble-tactile-sage-b {
+  background: #DFEBE0;
+  box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.05),
+    0 3px 6px -1px rgba(30, 70, 45, 0.1);
+  border: 1px solid rgba(160, 200, 170, 0.75);
+}
+
+/* Custom Scrollbars per Theme */
+.book-page-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.book-page-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.book-page-scroll::-webkit-scrollbar-thumb {
+  background: rgba(180, 150, 110, 0.3);
+  border-radius: 4px;
+}
+.book-page-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(180, 150, 110, 0.6);
+}
+
+.book-page-scroll-midnight::-webkit-scrollbar {
+  width: 4px;
+}
+.book-page-scroll-midnight::-webkit-scrollbar-track {
+  background: transparent;
+}
+.book-page-scroll-midnight::-webkit-scrollbar-thumb {
+  background: rgba(100, 149, 237, 0.3);
+  border-radius: 4px;
+}
+.book-page-scroll-midnight::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 149, 237, 0.6);
+}
+
+.book-page-scroll-sage::-webkit-scrollbar {
+  width: 4px;
+}
+.book-page-scroll-sage::-webkit-scrollbar-track {
+  background: transparent;
+}
+.book-page-scroll-sage::-webkit-scrollbar-thumb {
+  background: rgba(80, 140, 100, 0.3);
+  border-radius: 4px;
+}
+.book-page-scroll-sage::-webkit-scrollbar-thumb:hover {
+  background: rgba(80, 140, 100, 0.6);
+}
